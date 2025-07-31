@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: lara-site
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: lara-site
   ports:
@@ -36,3 +36,21 @@ spec:
             cpu: "0.5"
         ports:
         - containerPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: lara-site
+  labels:
+    app.kubernetes.io/name: lara-site
+spec:
+  rules:
+    - http:
+        paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+              name: lara-site
+              port:
+                number: 8081
