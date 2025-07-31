@@ -48,7 +48,7 @@ spec:
     - http:
         paths:
         - pathType: Prefix
-          path: "/"
+          path: "/site"
           backend:
             service:
               name: lara-site
