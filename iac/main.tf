@@ -1,19 +1,16 @@
 provider "kubernetes" {
-  host                   = "http://localhost:8080/api/v1/kubernetes/proxy"
-  client_certificate     = base64decode("LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJrRENDQVRlZ0F3SUJBZ0lJSkwwQkgzaHlnLzR3Q2dZSUtvWkl6ajBFQXdJd0l6RWhNQjhHQTFVRUF3d1kKYXpOekxXTnNhV1Z1ZEMxallVQXhOelE1TXpNMU9EQTRNQjRYRFRJMU1EWXdOekl5TXpZME9Gb1hEVEkyTURZdwpOekl5TXpZME9Gb3dNREVYTUJVR0ExVUVDaE1PYzNsemRHVnRPbTFoYzNSbGNuTXhGVEFUQmdOVkJBTVRESE41CmMzUmxiVHBoWkcxcGJqQlpNQk1HQnlxR1NNNDlBZ0VHQ0NxR1NNNDlBd0VIQTBJQUJDNGE5dGF3dERickp6OGgKdGlSSUVYcFJOZDV4OFVncTFQQVJGdERSZEVNMnlOZDlXRDFBRnd0SGM4VGw4bm55YzB0bEZ5enRmSGRYVjRsTwpGVkU2ZlFXalNEQkdNQTRHQTFVZER3RUIvd1FFQXdJRm9EQVRCZ05WSFNVRUREQUtCZ2dyQmdFRkJRY0RBakFmCkJnTlZIU01FR0RBV2dCVFM3bUNEbXFSaVBod1ZuWVJNRERmeEMyNVh5VEFLQmdncWhrak9QUVFEQWdOSEFEQkUKQWlBM3hYSjcyZHV1NWtodzA4M2kxL0RuNk5rbU1JWkhEWWY3eS9SdHJ2aVVkd0lnTUxObk9iNnljQzc3REQyTgowYnk0L2tnNkdlblh6ZVVBZXZBeHRQV3p1NUU9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0KLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJlRENDQVIyZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWpNU0V3SHdZRFZRUUREQmhyTTNNdFkyeHAKWlc1MExXTmhRREUzTkRrek16VTRNRGd3SGhjTk1qVXdOakEzTWpJek5qUTRXaGNOTXpVd05qQTFNakl6TmpRNApXakFqTVNFd0h3WURWUVFEREJock0zTXRZMnhwWlc1MExXTmhRREUzTkRrek16VTRNRGd3V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFUWlcxcUhKWXlGdlRzeng1eDBuT3RCMzFHOHRTUVoremhHODVWZDdqYWkKM2NwUE53dDlCSWFyYU5FUWdScjQwWnpnbG5TRG9mS1JBWW55WkxRdG5ISnhvMEl3UURBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVTB1NWdnNXFrWWo0Y0ZaMkVUQXczCjhRdHVWOGt3Q2dZSUtvWkl6ajBFQXdJRFNRQXdSZ0loQUp5WkNtdCszTzlsOE1wQm1zU2xmbHo2b1FBemh4bHIKeStxYU84MXZNWGxtQWlFQWcwL1JSeGJuVVpmOWREd0hpQWdJeVUvak1QdUtEb3BUTTdnZ09jbEdtNXc9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K")
-  client_key             = base64decode("LS0tLS1CRUdJTiBFQyBQUklWQVRFIEtFWS0tLS0tCk1IY0NBUUVFSUhsWkUycUcrMEhBbjdOd3A3ZnhTd3pQWGttd1pyeTFPeUh4RUxUZDFPeEVvQW9HQ0NxR1NNNDkKQXdFSG9VUURRZ0FFTGhyMjFyQzBOdXNuUHlHMkpFZ1JlbEUxM25IeFNDclU4QkVXME5GMFF6YkkxMzFZUFVBWApDMGR6eE9YeWVmSnpTMlVYTE8xOGQxZFhpVTRWVVRwOUJRPT0KLS0tLS1FTkQgRUMgUFJJVkFURSBLRVktLS0tLQo=")
-  cluster_ca_certificate = base64decode("LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJlRENDQVIyZ0F3SUJBZ0lCQURBS0JnZ3Foa2pPUFFRREFqQWpNU0V3SHdZRFZRUUREQmhyTTNNdGMyVnkKZG1WeUxXTmhRREUzTkRrek16VTRNRGd3SGhjTk1qVXdOakEzTWpJek5qUTRXaGNOTXpVd05qQTFNakl6TmpRNApXakFqTVNFd0h3WURWUVFEREJock0zTXRjMlZ5ZG1WeUxXTmhRREUzTkRrek16VTRNRGd3V1RBVEJnY3Foa2pPClBRSUJCZ2dxaGtqT1BRTUJCd05DQUFSNmhvQ2xzUjQ3eEViMDI2T29ZbnMzNysvTytXYW55VVNWRnRkZGVDWUcKTzRMYzNzUFY5NmtoVTB2TzRIWVlneUp2dU55Y0RjUHZIZVd6dk9CVGJxMTFvMEl3UURBT0JnTlZIUThCQWY4RQpCQU1DQXFRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlZIUTRFRmdRVUUrdkhLcUJyb1ZZVXRQOW5Rb1pOClNhT21rUDR3Q2dZSUtvWkl6ajBFQXdJRFNRQXdSZ0loQVBkajJzWGlsS2F3bmxBTEl6OWJSRTg2MHZlbjk2MUsKNE5mRXJlbjZvdWlJQWlFQW5Xc0J0eGJvcEhwcFhESUFEWloybk82ck8wV3RtY0dzdXpwMEl1RnQ2OEE9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K")
+  config_path = "C:/Users/alanb/.kube/config/k3s.yaml"
 }
 
 resource "kubernetes_service" "lara_site_service" {
   metadata {
-    name = var.app_namme
+    name = var.app_name
   }
 
   spec {
-    type = "LoadBalancer"
+    type = "ClusterIP"
     selector = {
-      app = var.app_namme
+      app = var.app_name
     }
     port {
       port = 8081
@@ -24,9 +21,9 @@ resource "kubernetes_service" "lara_site_service" {
 
 resource "kubernetes_deployment" "lara_site_deployment" {
   metadata {
-    name = var.app_namme
+    name = var.app_name
     labels = {
-      app = var.app_namme
+      app = var.app_name
     }
   }
 
@@ -35,24 +32,57 @@ resource "kubernetes_deployment" "lara_site_deployment" {
 
     selector {
       match_labels = {
-        app = var.app_namme
+        app = var.app_name
       }
     }
 
     template {
       metadata {
         labels = {
-          app = var.app_namme
+          app = var.app_name
         }
       }
 
       spec {
         container {
-          name = var.app_namme
-          image = "alaninformatica/lara-site:${var.image_tag}"
+          name = var.app_name
+          image = "${var.docker_repository_name}/${var.app_name}:${var.image_tag}"
 
           port {
             container_port = var.app_container_port
+          }
+        }
+      }
+    }
+  }
+}
+
+
+resource "kubernetes_ingress_v1" "lara_site_ingress" {
+  metadata {
+    name      = "${var.app_name}-ingress"
+    annotations = {
+      "kubernetes.io/ingress.class" = "traefik"
+    }
+  }
+
+  spec {
+    ingress_class_name = "traefik"
+
+    rule {
+      host = var.domain_name
+
+      http {
+        path {
+          path     = "/"
+          path_type = "Prefix"
+          backend {
+            service {
+              name = kubernetes_service.lara_site_service.metadata[0].name
+              port {
+                number = 8081
+              }
+            }
           }
         }
       }
