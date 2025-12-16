@@ -5,7 +5,11 @@ A infraestrutura para o site do LARA conta com três manifestos yaml para o Kube
 1. [prod-httproutes.yaml](prod-httproutes.yaml), para o ambiente de produção, ou [dev-httproutes.yaml](dev-httproutes.yaml), para o ambiente de desenvolvimento
 2. [service-manifest.yaml](service-manifest.yaml)
 
-A ordem acima não precisa ser seguida, uma vez que não são recursos dependentes
+A ordem acima não precisa ser seguida, uma vez que não são recursos dependentes.
+
+> [!TIP]
+>
+> Os comandos listados aqui foram executados em no Ubuntu através do WSL, com o kubectl propriamente configurado para realizar login com o cluster.
 
 ## Realizar deploy das rotas http
 
